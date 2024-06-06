@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - BD Dating</title>
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ff0000, #ffff00);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInBackground 2s ease-in-out forwards;
+        }
+
+        @keyframes fadeInBackground {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            animation: slideIn 1s ease-out forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 28px;
+        }
+
+        .settings-section {
+            margin-bottom: 40px;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .settings-section h3 {
+            margin-bottom: 20px;
+            font-size: 22px;
+            color: #ff3399;
+        }
+
+        .settings-section label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .settings-section input[type="text"],
+        .settings-section input[type="email"],
+        .settings-section input[type="password"],
+        .settings-section select {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .settings-section input[type="text"]:focus,
+        .settings-section input[type="email"]:focus,
+        .settings-section input[type="password"]:focus,
+        .settings-section select:focus {
+            border-color: #ff66cc;
+            outline: none;
+        }
+
+        .settings-section button {
+            padding: 15px 30px;
+            background-color: #ff66cc;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .settings-section button:hover {
+            background-color: #ff3399;
+            transform: scale(1.05);
+        }
+
+        .settings-section button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 102, 204, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Settings</h2>
+
+        <div class="settings-section">
+            <h3>Account Settings</h3>
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Username">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Email">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Password">
+            <button>Save Changes</button>
+        </div>
+
+        <div class="settings-section">
+            <h3>Privacy Settings</h3>
+            <label for="profile-visibility">Profile Visibility:</label>
+            <select id="profile-visibility">
+                <option value="public">Public</option>
+                <option value="friends">Friends</option>
+                <option value="private">Private</option>
+            </select>
+            <label for="message-settings">Who can message you:</label>
+            <select id="message-settings">
+                <option value="everyone">Everyone</option>
+                <option value="friends">Friends</option>
+                <option value="no-one">No one</option>
+            </select>
+            <button>Save Changes</button>
+        </div>
+
+        <div class="settings-section">
+            <h3>Notification Settings</h3>
+            <label for="email-notifications">Email Notifications:</label>
+            <select id="email-notifications">
+                <option value="all">All</option>
+                <option value="important">Important Only</option>
+                <option value="none">None</option>
+            </select>
+            <label for="push-notifications">Push Notifications:</label>
+            <select id="push-notifications">
+                <option value="all">All</option>
+                <option value="important">Important Only</option>
+                <option value="none">None</option>
+            </select>
+            <button>Save Changes</button>
+        </div>
+
+        <!-- Add more settings sections as needed -->
+
+    </div>
+</body>
+</html>

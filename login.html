@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BD Dating</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(45deg, #ff0000, #ffff00); /* Red and yellow gradient */
+            animation: slideIn 1s ease forwards; /* Slide-in animation */
+        }
+        
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        #login-box {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Increased shadow */
+            width: 320px;
+            max-width: 90%;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards; /* Fade-in animation */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff66cc; /* Pink background */
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff3399; /* Darker pink on hover */
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+
+        .signup-link {
+            margin-top: 20px;
+        }
+
+        .forgot-password {
+            margin-top: 10px;
+        }
+
+        .forgot-password a {
+            color: #ff66cc;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-box">
+        <h2>Welcome to BD Dating</h2>
+        <form id="login-form" action="#">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+            <p id="error-message" class="error-message"></p>
+        </form>
+        <p class="forgot-password"><a href="forgot-password.html">Forgot Password?</a></p>
+        <p class="signup-link">Don't have an account? <a href="signup.html">Sign up here</a></p>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            // Here you can add your logic to validate the username and password
+            // For simplicity, let's just check if both fields are filled
+            if (username.trim() === "" || password.trim() === "") {
+                document.getElementById("error-message").textContent = "Please enter both username and password.";
+            } else {
+                // If validation passes, you can submit the form or perform further actions
+                document.getElementById("error-message").textContent = ""; // Clear any previous error message
+                console.log("Username: " + username);
+                console.log("Password: " + password);
+                // In a real-world scenario, you would likely make an AJAX request to authenticate the user
+            }
+        });
+    </script>
+</body>
+</html>
