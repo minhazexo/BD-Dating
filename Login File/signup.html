@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CopyDating - Sign Up</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito|Roboto" rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <style>
+    /* Add your CSS magic here */
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      width: 400px;
+      max-width: 90%;
+    }
+
+    h2 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px; /* Add this line to adjust the font size */
+      line-height: 1.2; /* Add this line to adjust line height */
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="email"],
+    input[type="text"],
+    input[type="password"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff574f;
+    }
+
+    .agreement {
+      font-size: 14px;
+    }
+
+    a {
+      color: #ff6f61;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+   <h1>...</h1>
+    <form id="signup-form" class="sign-up__form" method="post">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder
+        ="Password" required>
+    </div>
+    <div class="form-group">
+    <label for="age">Age:</label>
+    <select id="age" name="age" required>
+    <option value="">Select</option>
+    <!-- Age options generated dynamically -->
+    </select>
+    </div>
+    <div class="form-group">
+    <label for="sex">I am:</label>
+    <select id="sex" name="sex" required>
+    <option value="0">Male</option>
+    <option value="1">Female</option>
+    <option value="2">Couple</option>
+    </select>
+    </div>
+    <div class="form-group">
+    <label>Looking For:</label><br>
+    <input type="checkbox" id="male" value="0" checked> <label for="male">Male</label>
+    <input type="checkbox" id="female" value="1" checked> <label for="female">Female</label>
+    <input type="checkbox" id="couple" value="2"> <label for="couple">Couple</label>
+    </div>
+    <div class="form-group">
+    <p class="agreement">
+    By submitting this form, you certify that you are 18 years or older, and agree to our
+    <a href="https://www.fuckbook.tv/en/about/privacy">privacy policy</a> and
+    <a href="https://www.fuckbook.tv/en/about/terms">terms & conditions</a>.
+    </p>
+    </div>
+    <button type="submit">Sign Up</button>
+    </form>
+    
+      </div>
+    </body>
+    </html>
